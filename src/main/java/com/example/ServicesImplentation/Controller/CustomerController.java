@@ -21,9 +21,8 @@ public class CustomerController {
 
     @GetMapping("/test")
     public String test(){
-        return "Thsi Is A Test Run";
+        return "This Is A Test Run";
     }
-
     @PostMapping("/save")
     public String save(@Valid @RequestBody Customer customer){
         customerServices.save(customer);
@@ -33,7 +32,6 @@ public class CustomerController {
     public List<Customer> findAll(){
         return customerServices.findAll();
     }
-
     @GetMapping("/id/{id}")
     public Optional<Customer> findById(@PathVariable int id)throws IdNotFoundException {
         Optional<Customer> customer=customerServices.findById(id);
