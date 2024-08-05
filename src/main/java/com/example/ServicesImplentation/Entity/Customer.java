@@ -21,7 +21,7 @@ public class Customer {
     int id;
     @Column(name = "Name",updatable = true)
     @NotBlank(message = "Name Cannot Be Empty")
-    @Pattern(regexp = "^[a-zA-Z]$",message = "Name Cannot Contain Special Characters")
+    @Pattern(regexp = "^[a-zA-Z]+$",message = "Name Cannot Contain Special Characters")
     String name;
     @Column(name = "Address",updatable = true)
     @NotBlank(message = "Please Provide an Address")
